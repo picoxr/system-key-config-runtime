@@ -7,7 +7,7 @@ This JAR file is used to config system home key
 
 ## Modify AndroidManifest
 
- Modify the AndroidManifest file. Add android:sharedUserId="android.uid.system" in the Manifest tag.
+Add ```android:sharedUserId="android.uid.system"``` in the Manifest tag.
 
 Add permissions:
 
