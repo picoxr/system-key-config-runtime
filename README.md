@@ -2,6 +2,8 @@
 
 Note: Regarding JAR file creation and usage, please refer to [the Guideline](https://github.com/PicoSupport/PicoSupport/blob/master/How_to_use_JAR_file_in_Unity_project_on_Pico_device.docx)
 
+## Introduction
+
 1. Modify the AndroidManifest file. Add android:sharedUserId="android.uid.system" in the Manifest tag.
 
 Add permissions:
@@ -58,6 +60,3 @@ Parameter set to function value 1
 Open adb and copy the file to data/local/ TMP:
 
 adb push SystemKeyConfig.prop /data/local/tmp/
-
-
-
