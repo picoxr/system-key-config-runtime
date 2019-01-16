@@ -3,8 +3,11 @@
 Note: Regarding JAR file creation and usage, please refer to [the Guideline](https://github.com/PicoSupport/PicoSupport/blob/master/How_to_use_JAR_file_in_Unity_project_on_Pico_device.docx)
 
 ## Introduction
+This JAR file is used to config system home key
 
-1. Modify the AndroidManifest file. Add android:sharedUserId="android.uid.system" in the Manifest tag.
+## Modify AndroidManifest
+
+ Modify the AndroidManifest file. Add android:sharedUserId="android.uid.system" in the Manifest tag.
 
 Add permissions:
 
@@ -15,7 +18,7 @@ Add permissions:
 
 Modify MainActivity: android:name=" com.example.picokeyconfig.PicoKeyConfigManager"
 
-2. Configration file description
+## Configration file
 
 ```
 Action_home_single_tap   :home click function
