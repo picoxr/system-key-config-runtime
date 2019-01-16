@@ -17,11 +17,13 @@ Modify MainActivity: android:name=" com.example.picokeyconfig.PicoKeyConfigManag
 
 2. Configration file description
 
+```
 Action_home_single_tap   :home click function
 
 Action_home_double_tap   :home double tap function
 
 Action_home_long_press   :home long press function
+```
 
 The value of the above functions can be set as, and the above values can be set as the corresponding functions defined below to take effect
 
@@ -38,7 +40,6 @@ The value of the above functions can be set as, and the above values can be set 
 Action_power_press power  function
 
 Not set: system default function 0: invalid 1: valid
-
 
 
 Time_home_double_tap  :double click to determine the interval
