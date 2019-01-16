@@ -1,31 +1,21 @@
 # SystemKeyConfig Instructions
 
-Note: Regarding java package creation and usege, please refer to [the Guideline](https://github.com/PicoSupport/PicoSupport/blob/master/How_to_use_JAR_file_in_Unity_project_on_Pico_device.docx)
+Note: Regarding JAR file creation and usage, please refer to [the Guideline](https://github.com/PicoSupport/PicoSupport/blob/master/How_to_use_JAR_file_in_Unity_project_on_Pico_device.docx)
 
-1. Equipment Goblin system B76 or above version is required
+1. Modify the AndroidManifest file. Add android:sharedUserId="android.uid.system" in the Manifest tag.
 
-  Create a new Unity project and copy the PicoKeyConfig_xxx. Jar package from the plugins-> Android in the Demo to the directory corresponding to the Unity project.Place the files that need to be configured in any directory of the system and pass the file name and path as parameters to the interface
-
-2. Modify the androidminifests. XML file.Add android:sharedUserId="android.uid.system" in the Manifest tag.
-
-Add permissions (if not) :
+Add permissions:
 
 ```
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-Modifica mainactivity: android:name=" com.example.picokeyconfig.PicoKeyConfigManager"
+Modify MainActivity: android:name=" com.example.picokeyconfig.PicoKeyConfigManager"
 
+2. Configration file description
 
-
-3. Copy the script of PicoUnityActivity. Cs in the Demo to any directory of Unity project.
-
-4. Call the Android interface,For example: PicoUnityActivity CallObjectMethod (" androidSetUserKey ", "file contains path");
-
-5. Profile description
-
-   Action_home_single_tap   :home click function
+Action_home_single_tap   :home click function
 
 Action_home_double_tap   :home double tap function
 
