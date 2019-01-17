@@ -53,22 +53,22 @@ public class MainActivity extends Activity {
         SystemPropertiesProxy.set(mContext, localConfigEnable, "1");
     }
 
-    // 设置用户的Home键值响应
+    // set home key value
     public void setUserKeyClick(View view) {
         copyConfigTodata(0);
         Intent intent = new Intent();
         intent.setAction("android.intent.user_keyconfig_change");
         sendBroadcast(intent);
-        Log.i("发送广播", "sucess");
+        Log.i("send broadcast", "sucess");
     }
 
-    // 回复系统的Home键值响应
+    // restore default home key value
     public void resetDefaultKeyClick(View view) {
         copyConfigTodata(1);
         Intent intent = new Intent();
         intent.setAction("android.intent.user_keyconfig_change");
         sendBroadcast(intent);
-        Log.i("发送广播", "sucess");
+        Log.i("send broadcast", "sucess");
     }
 
     private boolean copyConfigTodata(int configType) {
