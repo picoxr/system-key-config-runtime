@@ -7,17 +7,23 @@ This JAR file is used to config system home key
 
 ## Modify AndroidManifest
 
-Add ```android:sharedUserId="android.uid.system"``` in the Manifest tag.
+Add Manifest tag
+```
+android:sharedUserId="android.uid.system"
+``` 
 
-Add permissions:
+Add permissions
 
 ```
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-Modify MainActivity: android:name=" com.example.picokeyconfig.PicoKeyConfigManager"
+## ClassName
 
+```
+android:name=" com.example.picokeyconfig.PicoKeyConfigManager"
+``` 
 ## Configration file
 
 ```
