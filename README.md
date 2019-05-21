@@ -1,29 +1,54 @@
 # SystemKeyConfig 
 
+JAR file, demo apk are in /resource.    
 Note: Regarding JAR file creation and usage, please refer to [the Guideline](https://github.com/picoxr/support/blob/master/How%20to%20Use%20JAR%20file%20in%20Unity%20project%20on%20Pico%20device.docx)
 
 ## Introduction
 This JAR file is used to config system home key
 
 ## Modify AndroidManifest
-
 Add Manifest tag
 ```
 android:sharedUserId="android.uid.system"
 ``` 
 
 Add permissions
-
 ```
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
 ## ClassName
-
 ```
-android:name=" com.example.picokeyconfig.PicoKeyConfigManager"
+android:name="com.picovr.picokeyconfig.SystemKeyConfigClass"
 ``` 
+
+## Interface
+```
+void setUserKeyConfig()  //Set user custom key configuration.
+void setDefaultKeyConfig()  //Set key config to default.
+```
+
+## Permission
+```
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+
+## Sample Code
+```
+private void Start()
+{
+	string path = "/storage/emulated/0/Download/";
+	AndroidJavaObject keyConfig = new AndroidJavaObject("com.picovr.picokeyconfig.SystemKeyConfigClass");
+	AndroidJavaObject ActivityContext = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+	keyConfig.Call("init", ActivityContext, path);
+}
+
+keyConfig.Call("setUserKeyConfig");
+keyConfig.Call("setDefaultKeyConfig");
+```
+
 ## Configration file
 
 ```
