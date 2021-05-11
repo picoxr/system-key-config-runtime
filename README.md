@@ -1,7 +1,10 @@
 # SystemKeyConfig 
 
 JAR file, demo apk are in /resource.    
-Note: Regarding JAR file creation and usage, please refer to [the Guideline](http://static.appstore.picovr.com/docs/JarUnity/index.html)
+Note: 
+- Regarding JAR file creation and usage, please refer to [the Guideline](http://static.appstore.picovr.com/docs/JarUnity/index.html)
+- If you have any questions/comments, please raise requests at [**PicoDevSupport Portal**](https://picodevsupport.atlassian.net/servicedesk/customer/user/login?
+
 
 ## Introduction
 This JAR file is used to config system home key
